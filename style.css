@@ -1,11 +1,12 @@
-body{
+body {
     background: #F4D04E;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.card{
+.card {
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -20,17 +21,22 @@ body{
     border: 1px solid #111111;
     box-shadow: 8px 8px 0px #000000;
     border-radius: 20px;
+    transition: transform 0.3s ease;
 }
 
-.card-img{
+/* Hover effect on the entire card */
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card-img {
     width: 279px;
     height: 200px;
     background: #F4D04E;
     border-radius: 10px;
 }
 
-
-.card-content{
+.card-content {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -40,7 +46,7 @@ body{
     height: 173px;
 }
 
-.category{
+.category {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,9 +56,16 @@ body{
     height: 26px;
     background: #F4D04E;
     border-radius: 4px;
+    transition: background-color 0.3s ease;
 }
 
-#learning{
+/* Hover effect on category */
+.category:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+#learning {
     width: 49px;
     height: 18px;
     font-family: 'Figtree';
@@ -61,10 +74,14 @@ body{
     font-size: 12px;
     line-height: 150%;
     color: #111111;
-    order: 0;
+    transition: background-color 0.3s ease;
 }
 
-#date{
+#learning:hover{
+    color: #FFFFFF;
+}
+
+#date {
     width: 123px;
     height: 18px;
     font-family: 'Figtree';
@@ -73,10 +90,9 @@ body{
     font-size: 12px;
     line-height: 150%;
     color: #111111;
-    /* order: 1; */
 }
 
-#title{
+#title {
     width: 279px;
     height: 30px;
     font-family: 'Figtree';
@@ -86,13 +102,17 @@ body{
     line-height: 150%;
     color: #111111;
     margin: 8px auto;
-    /* order: 2; */
     align-self: stretch;
     flex-grow: 0;
-
+    transition: color 0.3s ease;
 }
 
-#description{
+/* Hover effect on title */
+#title:hover {
+    color: #F4D04E;
+}
+
+#description {
     width: 279px;
     height: 63px;
     font-family: 'Figtree';
@@ -101,13 +121,9 @@ body{
     font-size: 14px;
     line-height: 150%;
     color: #6B6B6B;
-    /* order: 3; */
-    align-self: stretch;
-    flex-grow: 0;
-
 }
 
-.author{
+.author {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -118,13 +134,20 @@ body{
     position: absolute;
     bottom: 8px;
 }
-    #author-image{
+
+#author-image {
     width: 32px;
     height: 32px;
+    border-radius: 50%;
+    transition: border 0.3s ease;
 }
 
+/* Hover effect on author image */
+#author-image:hover {
+    border: 2px solid #F4D04E;
+}
 
-#author-name{
+#author-name {
     width: 85px;
     height: 21px;
     font-family: 'Figtree';
@@ -135,67 +158,70 @@ body{
     color: #111111;
 }
 
+/* Add focus state to interactive elements (button, category, title) */
+#title:focus, .category:focus, #author-name:focus {
+    outline: 2px solid #F4D04E;
+    outline-offset: 4px;
+}
 
+.attribution {
+    position: fixed;
+    bottom: 0;
+}
+
+/* Responsive design for larger screens */
 @media screen and (width > 750px) {
-
-    .card{
+    .card {
         padding: 28px;
         gap: 24px;
         width: 384px;
         height: 522px;
     }
 
-    .card-img{
+    .card-img {
         width: 336px;
         height: 200px;
     }
 
-
-    .card-content{
+    .card-content {
         gap: 8px;
         width: 336px;
         height: 194px;
     }
-    .category{
 
+    .category {
         padding: 4px 12px;
         gap: 8px;
         width: 82px;
-        height: 29px; 
-
+        height: 29px;
     }
-    #learning{
+
+    #learning {
         width: 58px;
         height: 21px;
         font-size: 16px;
     }
 
-    #date{
+    #date {
         width: 143px;
         height: 21px;
         font-size: 14px;
     }
 
-    #title{
+    #title {
         width: 336px;
         height: 36px;
         margin: 8px auto;
         font-size: 24px;
     }
 
-    #description{
+    #description {
         width: 336px;
         height: 72px;
         font-size: 18px;
     }
 
-
-    #author-name{  
+    #author-name {
         font-size: 14px;
     }
-    
-    
 }
-
-
-

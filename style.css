@@ -15,7 +15,6 @@ body{
     gap: 12px;
     width: 327px;
     height: 501px;
-    left: 24px;
     top: 156px;
     background: #FFFFFF;
     border: 1px solid #111111;
@@ -86,6 +85,7 @@ body{
     font-size: 20px;
     line-height: 150%;
     color: #111111;
+    margin: 8px auto;
     /* order: 2; */
     align-self: stretch;
     flex-grow: 0;
@@ -134,3 +134,68 @@ body{
     line-height: 150%;
     color: #111111;
 }
+
+
+@media screen and (width > 750px) {
+
+    .card{
+        padding: 28px;
+        gap: 24px;
+        width: 384px;
+        height: 522px;
+    }
+
+    .card-img{
+        width: 336px;
+        height: 200px;
+    }
+
+
+    .card-content{
+        gap: 8px;
+        width: 336px;
+        height: 194px;
+    }
+    .category{
+
+        padding: 4px 12px;
+        gap: 8px;
+        width: 82px;
+        height: 29px; 
+
+    }
+    #learning{
+        width: 58px;
+        height: 21px;
+        font-size: 16px;
+    }
+
+    #date{
+        width: 143px;
+        height: 21px;
+        font-size: 14px;
+    }
+
+    #title{
+        width: 336px;
+        height: 36px;
+        margin: 8px auto;
+        font-size: 24px;
+    }
+
+    #description{
+        width: 336px;
+        height: 72px;
+        font-size: 18px;
+    }
+
+
+    #author-name{  
+        font-size: 14px;
+    }
+    
+    
+}
+
+
+

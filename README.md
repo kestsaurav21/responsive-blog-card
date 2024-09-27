@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 
-- Live Site URL: [https://main--responsive-blogcard.netlify.app/](https://main--responsive-blogcard.netlify.app/)
+- Live Site URL: [https://responsive-blogcard.netlify.app/](https://responsive-blogcard.netlify.app//)
 
 ## My process
 
